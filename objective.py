@@ -10,7 +10,7 @@ class Objective(BaseObjective):
         'reg': [.1, .5]
     }
 
-    def __init__(self, reg, fit_intercept=False):
+    def __init__(self, reg=.1, fit_intercept=False):
         self.fit_intercept = fit_intercept
         self.reg = reg
 
