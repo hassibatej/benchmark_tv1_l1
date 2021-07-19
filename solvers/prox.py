@@ -1,6 +1,7 @@
-from benchopt import BaseSolver
-import numpy as np
-import prox_tv as ptv
+from benchopt import BaseSolver, safe_import_context
+with safe_import_context() as import_ctx:
+    import numpy as np
+    import prox_tv as ptv
 
 
 class Solver(BaseSolver):
