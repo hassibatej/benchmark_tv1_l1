@@ -9,7 +9,7 @@ class Solver(BaseSolver):
     requirements = ['prox_tv']
 
     # Any parameter defined here is accessible as an attribute of the solver.
-    parameters = {'use_acceleration': [False, True]}
+    parameters = {'lmbd': [1., 0.01]}
 
     def set_objective(self, X, y, lmbd):
         self.X, self.y, self.lmbd = X, y, lmbd
