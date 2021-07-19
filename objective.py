@@ -6,12 +6,12 @@ class Objective(BaseObjective):
     name = "Total Variation"
 
     parameters = {
-        'fit_intercept': [False],
-        'reg': [.1]
+        'reg': [.1],
+        'lmbd': [1., 0.01]
     }
 
-    def __init__(self, reg=.1, fit_intercept=False):
-        self.fit_intercept = fit_intercept
+    def __init__(self, reg=.1, lmbd=.1):
+        self.lmbd = lmbd
         self.reg = reg
 
     def set_data(self, X, y):
